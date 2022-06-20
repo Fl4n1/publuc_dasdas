@@ -1,12 +1,8 @@
 <x-app-layout>
-    <div class="container max-w-7xl">
-    
+    <div class="container max-w-7xl">    
         <div class="bg-white p-6 overflow-hidden sm:rounded-lg">
             <div class="pb-4 ">
-
-
             <!--  -->
-
             <div class="slider-content1 border">
                 <div class="slider-wrapper1">
                     <div class="slider-container1">
@@ -27,14 +23,9 @@
                     </div>
                 </div>
             </div>
-
-
             <!--  -->
-                <h1 class="text-2xl p-4 font-medium text-left text-gray-700 mb-2">Последние новости</h1>
-
-
-                
-                 <div class="swiper_news ">
+                <h1 class="text-2xl p-4 font-medium text-left text-gray-700 mb-2">Последние новости</h1>               
+                 <div class="swiper_news">
                     <div class="swiper-wrapper">
                         @foreach($posts as $post)
                         <div class="swiper-slide ">
