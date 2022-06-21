@@ -246,8 +246,18 @@
                         <div class="px-5 py-6">
                         <p class="text-sm text-gray-400">{{ $product->category->name }}</p>
                             <h3 class="py-3 text-gray-900 ">{{ $product->name }}</h3>                           
-                            <span class="py-3 text-gray-700 mt-2">{{$product->price}} &#8381;</span>
-                            <button class="px-4 py-2 bg-sky-600 text-white text-xs font-bold float-right uppercase rounded-full rounded">Подробнее</button>
+                            <!-- <span class="py-3 text-gray-700 mt-2">{{$product->price}} &#8381;</span> -->
+                            <!-- <button class="px-4 py-2 bg-sky-600 text-white text-xs font-bold float-right uppercase rounded-full rounded">Подробнее</button> -->
+                            <form action="{{ route('cart.store') }}" method="POST" class="mt-auto" enctype="multipart/form-data">
+                                    @csrf
+                                    <input type="hidden" value="{{ $product->id }}" name="id">
+                                    <input type="hidden" value="{{ $product->name }}" name="name">
+                                    <input type="hidden" value="{{ $product->price }}" name="price">
+                                    <input type="hidden" value="{{ $product->image }}" name="image">
+                                    <input type="hidden" value="1" name="quantity">                                  
+                                    <span class="py-3 text-gray-700 mt-2">{{$product->price}} &#8381;</span>
+                                    <button class="px-4 py-2 bg-sky-600 text-white text-xs font-bold float-right uppercase rounded-full rounded">В корзину</button>                             
+                            </form>
                         </div>
                     </a>
                 </div>

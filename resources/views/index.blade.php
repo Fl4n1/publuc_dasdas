@@ -82,7 +82,7 @@
                                     <input type="hidden" value="1" name="quantity">
                                     <div class="flex item-center justify-between">
                                         <h1 class=" mt-a font-medium text-md whitespace-nowrap float-right content-center">{{ $product->price }} &#8381;</h1>
-                                        <button class="px-4 py-2 bg-sky-600 text-white text-xs font-bold float-right uppercase rounded-full rounded">Подробнее</button>
+                                        <button class="px-4 py-2 bg-sky-600 text-white text-xs font-bold float-right uppercase rounded-full rounded">В корзину</button>
                                     </div>
                                 </form>
                             </div>
